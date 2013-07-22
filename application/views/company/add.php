@@ -25,6 +25,10 @@
 							<input type="text" class="input-medium" name="url" id="url">
 						</div>
 					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary">Save</button>
+						<button class="btn">Cancel</button>
+					</div>
 				</fieldset>
 			</form>
 		</div>

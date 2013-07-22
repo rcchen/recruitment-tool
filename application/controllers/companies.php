@@ -43,4 +43,28 @@ class Companies extends CI_Controller {
 
 	}
 
+	public function action_create() {
+
+		// Create the new company
+		$c = new Company();
+		$c->name = $this->input->post('name');
+		$c->url = $this->input->post('url');
+
+		// Save to the database (validation applies)
+		if ($c->save()) {
+
+			// Redirect to the main company list
+			redirect('/companies');
+
+		}
+
+		// If validation fails, get errors
+		else {
+			foreach ($c->error->all as $error) {
+				echo $error;
+			}
+		}
+
+	}
+
 }
