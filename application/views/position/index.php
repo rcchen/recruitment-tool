@@ -20,9 +20,26 @@
 					</tr>
 				</thead>
 				<tbody>
-					
+					<? foreach($positions as $position) { ?>
+					<tr>
+						<td><? echo $position->id; ?></td>
+						<td><? echo $position->title; ?></td>
+						<td><? echo $position->location; ?></td>
+						<td><? echo $position->company->get()->name; ?></td>
+						<td>13</td>
+					</tr>
+					<? } ?>
 				</tbody>
 			</table>
+		</div>
+	</div>
+	<div class="widget">
+		<div class="widget-header">
+			<i class="icon-th-list"></i>
+			<h3>Actions</h3>
+		</div>
+		<div class="widget-content">
+			<a class="btn" href="/positions/add">Add Position</a>
 		</div>
 	</div>
 </div>

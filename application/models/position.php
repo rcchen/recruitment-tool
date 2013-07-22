@@ -12,6 +12,10 @@ class Position extends DataMapper {
             'label' => 'Title',
             'rules' => array('required'),
         ),
+        'location' => array(
+            'label' => 'Location',
+            'rules' => array('required'),
+        ),
         'description' => array(
             'label' => 'Description',
             'rules' => array('required'),
