@@ -46,33 +46,26 @@
             <div class="nav-collapse">
             
                 <ul class="nav pull-right">
-                    <li>
+                    <!-- <li>
                         <a href="#"><span class="badge badge-warning">7</span></a>
-                    </li>
+                    </li> -->
                     
                     <li class="divider-vertical"></li>
                     
                     <li class="dropdown">
+
+                        <? if ($user) { ?>
+                        <a href="/logout">Logout</a>
+                        <? } else { ?>
+                        <a href="/login">Login</a>
+                        <? } ?>
                         
+                        <!-- 
                         <a data-toggle="dropdown" class="dropdown-toggle " href="#">
                             Rod Howard <b class="caret"></b>                            
-                        </a>
+                        </a> -->
                         
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="./account.html"><i class="icon-user"></i> Account Setting  </a>
-                            </li>
-                            
-                            <li>
-                                <a href="./change_password.html"><i class="icon-lock"></i> Change Password</a>
-                            </li>
-                            
-                            <li class="divider"></li>
-                            
-                            <li>
-                                <a href="./"><i class="icon-off"></i> Logout</a>
-                            </li>
-                        </ul>
+                        
                     </li>
                 </ul>
                 

@@ -9,26 +9,26 @@
 	
 	<div id="login-content" class="clearfix">
 	
-	<form action="./index.html">
+	<form action="/login/verify" method="post">
 				<fieldset>
 					<div class="control-group">
-						<label class="control-label" for="username">Username</label>
+						<label class="control-label" for="email">Email</label>
 						<div class="controls">
-							<input type="text" class="" id="username" placeholder="Username">
+							<input type="text" class="" id="email" name="email">
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="password">Password</label>
 						<div class="controls">
-							<input type="password" class="" id="password" placeholder="Password">
+							<input type="password" class="" id="password" name="password">
 						</div>
 					</div>
 				</fieldset>
 				
-				<div id="remember-me" class="pull-left">
+				<!-- <div id="remember-me" class="pull-left">
 					<input type="checkbox" name="remember" id="remember" />
 					<label id="remember-label" for="remember">Remember Me</label>
-				</div>
+				</div> -->
 				
 				<div class="pull-right">
 					<button type="submit" class="btn btn-warning btn-large">
