@@ -49,11 +49,25 @@
 							Users	
 						</a>
 					</li>
+
+					<li <? if ($sidebar_active == 'companies') { echo 'class="active"'; } ?>>
+						<a href="/companies">
+							<i class="icon-lock"></i>
+							Companies
+						</a>
+					</li>
 					
-					<li>
-						<a href="./plans.html">
+					<li <? if ($sidebar_active == 'positions') { echo 'class="active"'; } ?>>
+						<a href="/positions">
 							<i class="icon-th-list"></i>
 							Positions		
+						</a>
+					</li>
+
+					<li <? if ($sidebar_active == 'applications') { echo 'class="active"'; } ?>>
+						<a href="/applications">
+							<i class="icon-suitcase"></i>
+							Applications
 						</a>
 					</li>
 					
