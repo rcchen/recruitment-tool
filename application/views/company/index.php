@@ -16,6 +16,7 @@
 					<tr>
 						<th>Name</th>
 						<th>URL</th>
+						<th>Positions</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -23,6 +24,7 @@
 					<tr>
 						<td><? echo $company->name; ?></td>
 						<td><? echo $company->url; ?></td>
+						<td><? echo $company->position->get()->count(); ?></td>
 					</tr>
 					<? } ?>
 				</tbody>

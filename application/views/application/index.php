@@ -1,7 +1,7 @@
 <div class="span9">
 	<h1 class="page-title">
 		<i class="icon-home"></i>
-		Positions
+		Applications
 	</h1>
 	<div class="widget widget-table">
 		<div class="widget-header">
@@ -13,20 +13,18 @@
 				<thead>
 					<tr>
 						<th>#</th>
+						<th>Applicant Name</th>
 						<th>Position</th>
-						<th>Location</th>
-						<th>Company</th>
-						<th>Applicants</th>
+						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody>
-					<? foreach($positions as $position) { ?>
+					<? foreach($applications as $application) { ?>
 					<tr>
-						<td><? echo $position->id; ?></td>
-						<td><? echo $position->title; ?></td>
-						<td><? echo $position->location; ?></td>
-						<td><? echo $position->company->get()->name; ?></td>
-						<td><? echo $position->application->get()->count(); ?></td>
+						<td><? echo $application->id; ?></td>
+						<td><? echo $application->user->get()->first_name . ' ' . $application->user->get()->last_name; ?></td>
+						<td><? echo $application->position->get()->title; ?></td>
+						<td>None</td>
 					</tr>
 					<? } ?>
 				</tbody>
@@ -39,7 +37,7 @@
 			<h3>Actions</h3>
 		</div>
 		<div class="widget-content">
-			<a class="btn" href="/positions/add">Add Position</a>
+			<a class="btn" href="/applications/add">Add Application</a>
 		</div>
 	</div>
 </div>

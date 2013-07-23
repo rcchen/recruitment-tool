@@ -6,14 +6,14 @@
 	<div class="stat-container">
 		<div class="stat-holder">
 			<div class="stat">
-				<span>123</span>
+				<span><? echo $open_positions; ?></span>
 				Open Positions
 			</div>
 		</div>
 		<div class="stat-holder">
 			<div class="stat">
-				<span>123</span>
-				Completed Sales
+				<span><? echo $open_applications; ?></span>
+				Active Applications
 			</div>
 		</div>
 	</div>

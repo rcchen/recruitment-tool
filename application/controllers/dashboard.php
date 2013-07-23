@@ -16,9 +16,18 @@ class Dashboard extends CI_Controller {
 		$data['user'] = $u;
 		$data['sidebar_active'] = 'dashboard';
 
+		// Get information for the dashboard
+		$p = new Position();
+		$p->get();
+		$data['open_positions'] = $p->count();
+
+		$a = new Application();
+		$a->get();
+		$data['open_applications'] = $a->count();
+
 		$this->load->view('header', $data);
 		$this->load->view('sidebar', $data);
-		$this->load->view('dashboard/index');
+		$this->load->view('dashboard/index', $data);
 		$this->load->view('footer');
 
 	}
